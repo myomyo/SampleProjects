@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/news_details_appbar_height"
+            app:contentScrim="@color/primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/iv_news_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/news_placeholder" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_publication_logo"
+                    android:layout_width="@dimen/publication_logo_width"
+                    android:layout_height="@dimen/publication_logo_height"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginTop="140dp"
+                    android:src="@drawable/img_publication_logo_placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/WhiteTextBlackShadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="150dp"
+                    android:layout_toRightOf="@id/iv_publication_logo"
+                    android:text="Eleven Media"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <TextView
+                    android:id="@+id/tv_posted_date"
+                    style="@style/WhiteTextBlackShadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_title"
+                    android:layout_below="@id/tv_title"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="Posted At : Jan 01 - 6:30AM"
+                    android:textSize="@dimen/text_regular" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_news_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:lineSpacingMultiplier="1.3"
+                android:text="ရှစ်လေးလုံးပြည်သူ့ ပါတီတည်ထောင်မှု လုပ်ငန်းစဉ် ကြန့်ကြာနေ၍ ကြားဖြတ်ရွေး ကောက်ပွဲတွင် ဝင်ရောက်ယှဉ် ပြိုင်နိုင်ခြင်းရှိ၊မရှိ ယတိပြတ်ပြော၍မရသေးကြောင်း ပါတီဒုတိယ ခေါင်းဆောင် ဦးရဲနိုင်အောင်က ဇွန်လ ၁ရက်တွင်ပြောသည်။
+
+‘‘ခြောက်လလောက် ပါတီ တည်ထောင်ရေးလုပ်ငန်းစဉ်ကြာ နေတာကိုတော့ မဖြစ်သင့်ဘူးလို့ ထင်ပါတယ်။ အခုလုပ်ငန်းစဉ်က ကြန့်ကြာနေတဲ့အတွက် ကြား ဖြတ်ရွေးကောက်ပွဲလည်း ပြိုင် ဖြစ်၊မပြိုင်ဖြစ်ကတော့ယတိပြတ် ပြောလို့မရပါဘူး။ ကျွန်တော်တို့ က ရေရှည်အတွက် ရည်ရွယ်ပြီး လုပ်တာဖြစ်တဲ့အတွက် ကြား ဖြတ်ရွေးကောက်ပွဲမီခြင်း၊မမီခြင်း က ကျွန်တော်တို့အတွက် ပြဿ နာမဟုတ်ပါဘူး။ မီရင်သုံးနေရာ အနိမ့်ဆုံးဝင်မယ်။ ဒါပေမဲ့ အခု မမီဖို့တော့များသွားပြီ’’ ဟု ဦးရဲနိုင်အောင်က ပြောသည်။
+
+ရှစ်လေးလုံးပြည်သူ့ပါတီ၏ အမည်၊ အလံနှင့် တံဆိပ်ကို ကန့် ကွက်လိုပါက ခုနစ်ရက်အတွင်း ကန့်ကွက်နိုင်ကြောင်း ပြည် ထောင်စုရွေးကောက်ပွဲကော်မ ရှင်က မေလ ၅ရက်တွင်ကြေညာ ပြီးနောက် လက်မှတ်ထိုးကန့် ကွက်သူ ၂၀၀ ကျော်ရှိကြောင်း ပြည်ထောင်စု ရွေးကောက်ပွဲ ကော်မရှင်ပြောရေးဆိုခွင့်ရှိသူ ဦး မြင့်နိုင်ကဆိုသည်။
+
+‘‘ပြည်ထဲရေးဝန်ကြီးဌာနကို လုပ်နေကျအတိုင်း တောင်းရ တယ်။ အဲဒီက ပြန်မလာသေးဘူး လေ။ ပါတီတစ်ခုကလည်းပဲသူတို့ ပါတီတည်ထောင်တဲ့သူတွေက ဒီ ဘက်ပါတီ တည်ထောင်တဲ့သူ တွေထဲမှာလည်း ပါနေတယ်။ ဒီ တော့ ပါတီနုတ်ထွက်ခြင်းက ဟို ဘက်ပါတီက နုတ်ထွက်တာနဲ့ မရှင်းမရှင်းဖြစ်နေတယ်ပေါ့လေ။ ဒါကိုလည်း ပြန်တင်ပြပေးထား တော့ အဲဒါကလည်းပြန်မလာ သေးဘူး’’ ဟု ဦးမြင့်နိုင်က ဇွန်လ ၁ရက်တွင် ပြောသည်။
+
+၂၀၁၅ အထွေထွေရွေး ကောက်ပွဲ ကျင်းပပြီးသည့်နောက် ပိုင်းကာလမှ မေလ ၈ရက် အတွင်း မှတ်ပုံတင်ခွင့်ပြုခဲ့ပြီးဖြစ်သော နိုင်ငံရေးပါတီများသည် နိုင်ငံရေးပါတီများ မှတ်ပုံတင်ခြင်း ဥပဒေ၊နည်းဥပဒေများနှင့်အညီ ကြားဖြတ်ရွေးကောက်ပွဲ၌ ဝင်ရောက်ယှဉ်ပြိုင်ရန် ပြည်ထောင်စုရွေးကောက်ပွဲကော်မရှင်က ၉၂ ပါတီသို့ ကြေညာချက်ပေးပို့၍ အကြောင်းကြားထားသည်။
+
+ရှစ်လေးလုံးပြည်သူ့ပါတီအ နေဖြင့် ပါတီမှတ်ပုံတင်ရေး ဆောင်ရွက်နေသောကြောင့် ယင်းအကြောင်းကြားမှု မရရှိ ကြောင်း ဦးရဲနိုင်အောင်က ပြော သည်။
+
+မြန်မာ့နိုင်ငံရေးတွင် အဓိ ကပါတီကြီး နှစ်ခုဖြစ်သည့်လက်ရှိ အာဏာရ အမျိုးသားဒီမိုကရေစီ အဖွဲ့ချုပ်နှင့် ပြည်ထောင်စုကြံ့ခိုင် ရေးနှင့် ဖွံ့ဖြိုးရေးပါတီသာရှိရာ ယခုရှစ်လေးလုံး ပြည်သူ့ပါတီ ထပ်မံပေါ်ပေါက်လာပါက မြန်မာ လူူထုအပေါ်သြဇာရှိသည့် တတိ ယ အဖွဲ့အစည်း (Third Party) အဖြစ်နိုင်ငံရေး အကဲခတ်သူများ ကသုံးသပ်ထားသည်။ လစ်လပ်မဲ ဆန္ဒနယ် ၁၃ နေရာအတွက် ကြား ဖြတ်ရွေးကောက်ပွဲကို နိုဝင်ဘာ ၃ရက်တွင် ပြုလုပ်မည်ဖြစ်သည်။"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular" />
+        </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_favorite_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:src="@drawable/ic_favorite_border_white_36dp"
+        app:layout_anchor="@+id/appbar"
+        app:layout_anchorGravity="right|bottom" />
+</android.support.design.widget.CoordinatorLayout>
