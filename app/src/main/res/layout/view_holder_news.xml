@@ -1,128 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_marginLeft="@dimen/margin_medium_2"
+    android:layout_marginRight="@dimen/margin_medium_2"
+    card_view:cardElevation="@dimen/margin_medium">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/iv_publication"
-        android:layout_width="@dimen/publication_logo_width"
-        android:layout_height="@dimen/publication_logo_height"
-        android:layout_marginStart="@dimen/margin_medium_2"
-        android:layout_marginTop="@dimen/margin_medium_2"
-        android:src="@drawable/img_publication_logo_placeholder" />
+        <ImageView
+            android:id="@+id/iv_publication"
+            android:layout_width="@dimen/publication_logo_width"
+            android:layout_height="@dimen/publication_logo_height"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:src="@drawable/img_publication_logo_placeholder" />
 
-    <TextView
-        android:id="@+id/tv_publication_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/iv_publication"
-        android:layout_marginLeft="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_toRightOf="@+id/iv_publication"
-        android:text="Eleven News"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/text_regular_2x" />
+        <TextView
+            android:id="@+id/tv_publication_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_publication"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/iv_publication"
+            android:text="Eleven News"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x" />
 
-    <TextView
-        android:id="@+id/tv_posted_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/tv_publication_title"
-        android:layout_below="@+id/tv_publication_title"
-        android:layout_marginTop="@dimen/margin_small"
-        android:text="Posted At : Jan 01 - 6:30AM"
-        android:textColor="@color/secondary_text" />
+        <TextView
+            android:id="@+id/tv_posted_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_publication_title"
+            android:layout_below="@+id/tv_publication_title"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Posted At : Jan 01 - 6:30AM"
+            android:textColor="@color/secondary_text" />
 
-    <org.mmtextview.components.MMTextView
-        android:id="@+id/tv_news_brief"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_publication"
-        android:layout_margin="@dimen/margin_medium_2"
-        android:ellipsize="end"
-        android:lineSpacingMultiplier="1.3"
-        android:maxLines="5"
-        android:text="ကမ္ဘာ့ရေနံစိမ်းဈေးသည် မေလ ၂၆ ရက်တွင် တစ်စည်လျှင် ၇၆ ဒသမ ၄၄ ဒေါ်လာရှိပြီး လွန်ခဲ့ သည့်လေးရက်ကထက် တစ်စည် လျှင် သုံးဒေါ်လာခန့် ပြန်လည်ကျ ဆင်းလာသည်။
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_news_brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_publication"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="5"
+            android:text="ကမ္ဘာ့ရေနံစိမ်းဈေးသည် မေလ ၂၆ ရက်တွင် တစ်စည်လျှင် ၇၆ ဒသမ ၄၄ ဒေါ်လာရှိပြီး လွန်ခဲ့ သည့်လေးရက်ကထက် တစ်စည် လျှင် သုံးဒေါ်လာခန့် ပြန်လည်ကျ ဆင်းလာသည်။
 ပြည်တွင်း စက်သုံးဆီဈေး ကွက်တွင် မေလ ၂၆ ရက်၌ အောက်တိန်း-92 တစ်လီတာ လျှင် ၈၇၀ ကျပ်၊ အောက်တိန်း-95 တစ်လီတာလျှင် ၉၂၀ ကျပ်၊ ဒီဇယ်တစ်လီတာလျှင် ၉၀၅ ကျပ် နှင့် ပရီမီယံဒီဇယ်တစ်လီတာလျှင် ၉၂၀ ကျပ်ခန့်ဖြင့် ရောင်းချနေ သည်။ လက်ရှိ ရောင်းချနေသော ပြည်တွင်း စက်သုံးဆီဈေးသည် ကမ္ဘာ့ရေနံစိမ်းဈေးတစ်စည်လျှင် ၇၉ ဒသမ ၈၀ ဒေါ်လာခန့်ဖြစ်ပေါ် ခဲ့သည့် ရက်က နှုန်းထားအတိုင်း ဖြစ်ပြီး ပြန်လည်လျှော့ချရောင်း ချခြင်းမရှိသေးသည်ကို တွေ့ရ ကြောင်း စက်သုံးဆီဈေးနှုန်းစောင့် ကြည့်လေ့လာသူတစ်ဦးက ပြော ကြားသည်။"
-        android:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text" />
 
-    <ImageView
-        android:id="@+id/iv_news_hero"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@id/tv_news_brief"
-        android:scaleType="centerCrop"
-        android:src="@drawable/news_placeholder" />
+        <ImageView
+            android:id="@+id/iv_news_hero"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/tv_news_brief"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/news_placeholder" />
 
-    <TextView
-        android:id="@+id/tv_news_statistics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_news_hero"
-        android:clickable="true"
-        android:foreground="@drawable/ripple"
-        android:padding="@dimen/margin_medium"
-        android:text="4 Likes - 5 Comments - Sent to 6 people"
-        android:textColor="@color/primary"
-        android:textSize="@dimen/text_regular" />
-
-    <LinearLayout
-        android:id="@+id/ll_news_actions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_news_statistics"
-        android:gravity="right"
-        android:orientation="horizontal">
-
-        <FrameLayout
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tv_news_statistics"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_below="@+id/iv_news_hero"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="@drawable/ripple">
+            android:foreground="@drawable/ripple"
+            android:padding="@dimen/margin_medium"
+            android:text="4 Likes - 5 Comments - Sent to 6 people"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_regular" />
 
-            <Button
-                android:id="@+id/btn_comment"
-                style="@style/NewsAction"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_comment_primary_24dp"
-                android:text="Comment" />
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/ll_news_actions"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="@drawable/ripple">
+            android:layout_below="@+id/tv_news_statistics"
+            android:gravity="right"
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_send_to"
-                style="@style/NewsAction"
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_send_primary_24dp"
-                android:text="Send To" />
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple">
 
-        </FrameLayout>
+                <Button
+                    android:id="@+id/btn_comment"
+                    style="@style/NewsAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_comment_primary_24dp"
+                    android:text="Comment" />
 
-    </LinearLayout>
+            </FrameLayout>
 
-    <ImageView
-        android:id="@+id/btn_favorite_news"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_favorite_border_primary_36dp"
-        android:layout_alignParentRight="true"
-        android:layout_margin="@dimen/margin_medium_2"
-        android:foreground="@drawable/ripple"
-        android:padding="@dimen/margin_medium"
-        android:clickable="true"
-        />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple">
+
+                <Button
+                    android:id="@+id/btn_send_to"
+                    style="@style/NewsAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_send_primary_24dp"
+                    android:text="Send To" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_favorite_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favorite_border_primary_36dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:foreground="@drawable/ripple"
+            android:padding="@dimen/margin_medium"
+            android:clickable="true"
+            />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -46,7 +46,7 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mNewsDelegate.onTapNews();
+                mNewsDelegate.onTapNews(mNews);
             }
         });
     }
@@ -54,17 +54,20 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
     public void setNewsData(NewsVO news) {
         mNews = news;
         tvNewsBrief.setText(news.getBrief());
-        tvPostedDate.setText("Posted at : "+news.getPostedDate());
+        tvPostedDate.setText(tvPostedDate.getContext().getResources().getString(R.string.format_posted_date, news.getPostedDate()));
+
         tvPublicationTitle.setText(news.getPublication().getTitle());
         Glide.with(ivPublicationLogo.getContext())
                 .load(news.getPublication().getLogo())
                 .into(ivPublicationLogo);
-        if(news.getImages() != null){
+
+        if (!news.getImages().isEmpty()) {
             Glide.with(ivNewsLogo.getContext())
                     .load(news.getImages().get(0))
                     .into(ivNewsLogo);
+        } else {
+            ivNewsLogo.setVisibility(View.GONE);
         }
-
 
     }
 

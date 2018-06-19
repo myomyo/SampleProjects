@@ -13,6 +13,7 @@ import android.util.Log;
 import com.pdcmyanmar.helloworld.R;
 import com.pdcmyanmar.helloworld.adapters.NewsAdapter;
 import com.pdcmyanmar.helloworld.data.models.NewsModel;
+import com.pdcmyanmar.helloworld.data.vos.NewsVO;
 import com.pdcmyanmar.helloworld.delegates.NewsDelegate;
 import com.pdcmyanmar.helloworld.events.SuccessGetNewsEvent;
 
@@ -58,29 +59,30 @@ public class NewsListActivity extends BaseActivity implements NewsDelegate {
     }
 
     @Override
-    public void onTapNews() {
+    public void onTapNews(NewsVO news) {
 
         Intent intent = new Intent(getApplicationContext(),NewsDetailsActivity.class);
+        intent.putExtra("newsId", news.getNewsId());
         startActivity(intent);
     }
 
     @Override
-    public void onTapFavorite() {
+    public void onTapFavorite(NewsVO news) {
 
     }
 
     @Override
-    public void onTapComment() {
+    public void onTapComment(NewsVO news) {
 
     }
 
     @Override
-    public void onTapSendTo() {
+    public void onTapSendTo(NewsVO news) {
 
     }
 
     @Override
-    public void onTapStatistics() {
+    public void onTapStatistics(NewsVO news) {
 
     }
 

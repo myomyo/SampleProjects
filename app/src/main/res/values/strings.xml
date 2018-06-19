@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">My First Application</string>
     <string name="action_settings">Settings</string>
     <!--Township Array-->
@@ -34,4 +34,5 @@
         <item>မြောက်ဒဂုံ</item>
         <item>တာမွေ</item>
     </string-array>
+    <string name = "format_posted_date"> Posted At : <xliff:g id="posted_date">%1$s</xliff:g></string>
 </resources>

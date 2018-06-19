@@ -2,6 +2,7 @@ package com.pdcmyanmar.helloworld.data.vos;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NewsVO {
@@ -46,6 +47,9 @@ public class NewsVO {
     }
 
     public List<String> getImages() {
+        if(images == null){
+            return new ArrayList<>();
+        }
         return images;
     }
 
