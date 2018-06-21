@@ -4,6 +4,8 @@ import com.pdcmyanmar.helloworld.data.vos.NewsVO;
 import com.pdcmyanmar.helloworld.events.SuccessGetNewsEvent;
 import com.pdcmyanmar.helloworld.network.HttpUrlConnectionDataAgentImpl;
 import com.pdcmyanmar.helloworld.network.NewsDataAgent;
+import com.pdcmyanmar.helloworld.network.OkHttpDataAgentImpl;
+import com.pdcmyanmar.helloworld.network.RetrofitDataAgentImpl;
 import com.pdcmyanmar.helloworld.utils.MMNewsConstants;
 
 import org.greenrobot.eventbus.EventBus;
@@ -23,7 +25,9 @@ public class NewsModel {
     private Map<String, NewsVO> mNewsMap;
 
     private NewsModel() {
-        mDataAgent = HttpUrlConnectionDataAgentImpl.getObjInstance();
+        //mDataAgent = HttpUrlConnectionDataAgentImpl.getObjInstance();
+       // mDataAgent = OkHttpDataAgentImpl.getObjInstance();
+        mDataAgent = RetrofitDataAgentImpl.getObjInstance();
         mNewsMap = new HashMap<>();
         EventBus.getDefault().register(this);
     }

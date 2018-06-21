@@ -30,7 +30,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/iv_publication_logo"
+                    android:id="@+id/iv_publication_logo_details"
                     android:layout_width="@dimen/publication_logo_width"
                     android:layout_height="@dimen/publication_logo_height"
                     android:layout_marginLeft="@dimen/margin_medium_2"
@@ -44,12 +44,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_medium"
                     android:layout_marginTop="150dp"
-                    android:layout_toRightOf="@id/iv_publication_logo"
+                    android:layout_toRightOf="@id/iv_publication_logo_details"
                     android:text="Eleven Media"
                     android:textSize="@dimen/text_regular_2x" />
 
                 <TextView
-                    android:id="@+id/tv_posted_date"
+                    android:id="@+id/tv_posted_date_details"
                     style="@style/WhiteTextBlackShadow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <org.mmtextview.components.MMTextView
                 android:id="@+id/tv_news_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +101,8 @@
 
 မြန်မာ့နိုင်ငံရေးတွင် အဓိ ကပါတီကြီး နှစ်ခုဖြစ်သည့်လက်ရှိ အာဏာရ အမျိုးသားဒီမိုကရေစီ အဖွဲ့ချုပ်နှင့် ပြည်ထောင်စုကြံ့ခိုင် ရေးနှင့် ဖွံ့ဖြိုးရေးပါတီသာရှိရာ ယခုရှစ်လေးလုံး ပြည်သူ့ပါတီ ထပ်မံပေါ်ပေါက်လာပါက မြန်မာ လူူထုအပေါ်သြဇာရှိသည့် တတိ ယ အဖွဲ့အစည်း (Third Party) အဖြစ်နိုင်ငံရေး အကဲခတ်သူများ ကသုံးသပ်ထားသည်။ လစ်လပ်မဲ ဆန္ဒနယ် ၁၃ နေရာအတွက် ကြား ဖြတ်ရွေးကောက်ပွဲကို နိုဝင်ဘာ ၃ရက်တွင် ပြုလုပ်မည်ဖြစ်သည်။"
                 android:textColor="@color/primary_text"
-                android:textSize="@dimen/text_regular" />
+                android:textSize="@dimen/text_regular"
+                android:layout_marginBottom="@dimen/margin_medium_2"/>
         </FrameLayout>
     </android.support.v4.widget.NestedScrollView>
 
