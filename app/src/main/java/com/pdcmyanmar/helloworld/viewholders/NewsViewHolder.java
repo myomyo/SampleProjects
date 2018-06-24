@@ -7,9 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.pdcmyanmar.helloworld.R;
 import com.pdcmyanmar.helloworld.data.vos.NewsVO;
 import com.pdcmyanmar.helloworld.delegates.NewsDelegate;
+import com.pdcmyanmar.helloworld.utils.GlideApp;
 
 import org.mmtextview.components.MMTextView;
 
@@ -57,13 +59,19 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         tvPostedDate.setText(tvPostedDate.getContext().getResources().getString(R.string.format_posted_date, news.getPostedDate()));
 
         tvPublicationTitle.setText(news.getPublication().getTitle());
-        Glide.with(ivPublicationLogo.getContext())
+        GlideApp.with(ivPublicationLogo.getContext())
                 .load(news.getPublication().getLogo())
+                .apply(RequestOptions
+                        .circleCropTransform()
+                        .placeholder(R.drawable.placeholder_images)
+                        .error(R.drawable.error))
                 .into(ivPublicationLogo);
 
         if (!news.getImages().isEmpty()) {
-            Glide.with(ivNewsLogo.getContext())
+            GlideApp.with(ivNewsLogo.getContext())
                     .load(news.getImages().get(0))
+                    .placeholder(R.drawable.placeholder_images)
+                    .error(R.drawable.error)
                     .into(ivNewsLogo);
         } else {
             ivNewsLogo.setVisibility(View.GONE);

@@ -35,4 +35,5 @@
         <item>တာမွေ</item>
     </string-array>
     <string name = "format_posted_date"> Posted At : <xliff:g id="posted_date">%1$s</xliff:g></string>
+    <string name="empty_msg">လက္ဂွိအခ်ိန္မွာ သတင္းေတြကိုေဖာမပျနိုင္ပါ</string>
 </resources>
