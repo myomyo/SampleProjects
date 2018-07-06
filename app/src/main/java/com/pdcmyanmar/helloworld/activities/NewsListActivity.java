@@ -76,7 +76,7 @@ public class NewsListActivity extends BaseActivity implements NewsDelegate {
                         .findLastCompletelyVisibleItemPosition() == recyclerView.getAdapter().getItemCount() - 1
                         && !isListEndReached) {
 
-                    // isListEndReached = true;
+                    isListEndReached = true;
                     NewsModel.getObjInstance().loadNewsList();
 
                 }
@@ -105,7 +105,7 @@ public class NewsListActivity extends BaseActivity implements NewsDelegate {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                NewsModel.getObjInstance().loadNewsList();
+                NewsModel.getObjInstance().forceRefreshNewsList();
             }
         });
 
@@ -119,7 +119,10 @@ public class NewsListActivity extends BaseActivity implements NewsDelegate {
     @Override
     protected void onStart() {
         super.onStart();
-        EventBus.getDefault().register(this);
+        if(!EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().register(this);
+        }
+
     }
 
     @Override
@@ -161,6 +164,7 @@ public class NewsListActivity extends BaseActivity implements NewsDelegate {
         Log.d("onSuccessGetNews", "onSuccessGetNews :" + event.getNewsList());
         mNewsAdapter.appendNewsList(event.getNewsList());
         swipeRefreshLayout.setRefreshing(false);
+        vpEmpty.setVisibility(View.GONE);
 
     }
 
@@ -170,6 +174,8 @@ public class NewsListActivity extends BaseActivity implements NewsDelegate {
         swipeRefreshLayout.setRefreshing(false);
         Snackbar.make(swipeRefreshLayout, event.getErrorMsg(), Snackbar.LENGTH_INDEFINITE).show();
         vpEmpty.setVisibility(View.VISIBLE);
+        rvNews.setVisibility(View.GONE);
+
 
     }
 

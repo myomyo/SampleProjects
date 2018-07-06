@@ -56,8 +56,8 @@ public class NewsModel {
 
     public NewsVO getNewsById(String newsId) {
 
-        //return mNewsMap.get(newsId);
-        return null; // TODO remove this after testing empty view layout in news details screen.
+        return mNewsMap.get(newsId);
+        //return null; // TODO remove this after testing empty view layout in news details screen.
     }
 
     @Subscribe(threadMode = ThreadMode.BACKGROUND)
@@ -70,6 +70,7 @@ public class NewsModel {
     @Subscribe(threadMode = ThreadMode.BACKGROUND)
     public void onSuccessForceRefreshGetNews(SuccessForceRefreshGetNewsEvent event) {
         setDataIntoRepository(event.getNewsList());
+        mPage++;
     }
 
     private void setDataIntoRepository(List<NewsVO> newsList) {

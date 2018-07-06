@@ -39,7 +39,7 @@ public class EmptyViewPod extends RelativeLayout {
     }
 
     public void setEmptyData(String emptyImageUrl, String emptyMsg){
-        GlideApp.with(getContext())
+        GlideApp.with(ivEmpty.getContext())
                 .load(emptyImageUrl)
                 .into(ivEmpty);
 

@@ -18,7 +18,7 @@ import org.mmtextview.components.MMTextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NewsViewHolder extends RecyclerView.ViewHolder {
+public class NewsViewHolder extends BaseNewsViewHolder {
 
     private NewsDelegate mNewsDelegate;
     private NewsVO mNews;
@@ -53,7 +53,9 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         });
     }
 
-    public void setNewsData(NewsVO news) {
+    @Override
+    public void bindData(NewsVO news) {
+        super.bindData(news);
         mNews = news;
         tvNewsBrief.setText(news.getBrief());
         tvPostedDate.setText(tvPostedDate.getContext().getResources().getString(R.string.format_posted_date, news.getPostedDate()));
@@ -76,7 +78,7 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         } else {
             ivNewsLogo.setVisibility(View.GONE);
         }
-
     }
+
 
 }
