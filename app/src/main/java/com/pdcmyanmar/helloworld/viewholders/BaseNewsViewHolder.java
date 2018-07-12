@@ -5,13 +5,10 @@ import android.view.View;
 
 import com.pdcmyanmar.helloworld.data.vos.NewsVO;
 
-public abstract class BaseNewsViewHolder extends RecyclerView.ViewHolder {
+public abstract class BaseNewsViewHolder extends BaseViewHolder<NewsVO> {
 
     public BaseNewsViewHolder(View itemView) {
         super(itemView);
     }
 
-    public void bindData(NewsVO news){
-
-    }
 }

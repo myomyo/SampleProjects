@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 public class NewsViewHolder extends BaseNewsViewHolder {
 
     private NewsDelegate mNewsDelegate;
-    private NewsVO mNews;
+    //private NewsVO mNews;
 
     @BindView(R.id.tv_news_brief)
     TextView tvNewsBrief;
@@ -48,15 +48,15 @@ public class NewsViewHolder extends BaseNewsViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mNewsDelegate.onTapNews(mNews);
+                mNewsDelegate.onTapNews(mData);
             }
         });
     }
 
     @Override
     public void bindData(NewsVO news) {
-        super.bindData(news);
-        mNews = news;
+        //super.bindData(news);
+        mData = news; // mNews = news;
         tvNewsBrief.setText(news.getBrief());
         tvPostedDate.setText(tvPostedDate.getContext().getResources().getString(R.string.format_posted_date, news.getPostedDate()));
 

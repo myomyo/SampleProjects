@@ -23,7 +23,7 @@ public class NewsBriefViewHolder extends BaseNewsViewHolder {
     @BindView(R.id.iv_news_hero)
     ImageView ivNewsHero;
 
-    private NewsVO mNews;
+    //private NewsVO mNews;
 
     public NewsBriefViewHolder(View itemView) {
         super(itemView);
@@ -32,7 +32,8 @@ public class NewsBriefViewHolder extends BaseNewsViewHolder {
 
     @Override
     public void bindData(NewsVO news) {
-        mNews = news;
+        //mNews = news;
+        mData = news;
         tvNewsBrief.setText(news.getBrief());
         tvPublicationTitle.setText(news.getPublication().getTitle());
         if (!news.getImages().isEmpty()) {

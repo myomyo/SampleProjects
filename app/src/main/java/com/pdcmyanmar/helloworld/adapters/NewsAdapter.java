@@ -17,17 +17,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PropertyResourceBundle;
 
-public class NewsAdapter extends RecyclerView.Adapter<BaseNewsViewHolder> {
+public class NewsAdapter extends BaseRecyclerAdapter<BaseNewsViewHolder, NewsVO> {
+
     private NewsDelegate mNewsDelegate;
-    private List<NewsVO> mNewsList;
+    //private List<NewsVO> mNewsList;
 
     private static final int VT_NEWS_COMPLETE =1000;
     private static final int VT_NEWS_BRIEF =2000;
 
 
     public NewsAdapter(NewsDelegate newsDelegate){
+        super();
         mNewsDelegate = newsDelegate;
-        mNewsList = new ArrayList<>();
+        //mNewsList = new ArrayList<>();
+
     }
 
     @NonNull
@@ -44,27 +47,27 @@ public class NewsAdapter extends RecyclerView.Adapter<BaseNewsViewHolder> {
         return null;
     }
 
-    @Override
+    /*@Override
     public void onBindViewHolder(@NonNull BaseNewsViewHolder holder, int position) {
-        holder.bindData(mNewsList.get(position));
-    }
+        holder.bindData(mData.get(position));
+    }*/
 
 
-    @Override
+    /*@Override
     public int getItemCount() {
-        return mNewsList.size();
-    }
+        return mData.size();
+    }*/
 
-    public void setNewsList(List<NewsVO> newsList){
-        mNewsList = newsList;
+    /*public void setNewsList(List<NewsVO> newsList){
+        mData = newsList;
         notifyDataSetChanged();
-    }
+    }*/
 
-    public void appendNewsList(List<NewsVO> newsList){
+    /*public void appendNewsList(List<NewsVO> newsList){
 
-        mNewsList.addAll(newsList);
+        mData.addAll(newsList);
         notifyDataSetChanged();
-    }
+    }*/
 
     @Override
     public int getItemViewType(int position) {

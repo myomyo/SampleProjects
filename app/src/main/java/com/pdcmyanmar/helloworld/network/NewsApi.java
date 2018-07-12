@@ -10,9 +10,9 @@ import retrofit2.http.POST;
 
 public interface NewsApi {
 
-    @FormUrlEncoded
-    @POST(MMNewsConstants.GET_NEWS)
-    Call<GetNewsResponse> loadNewsList(
-            @Field(MMNewsConstants.PARAM_ACCESS_TOKEN) String accessToken,
-            @Field(MMNewsConstants.PAGE) int page);
+        @FormUrlEncoded
+        @POST(MMNewsConstants.GET_NEWS)
+        Call<GetNewsResponse> loadNewsList(
+                @Field(MMNewsConstants.PARAM_ACCESS_TOKEN) String accessToken,
+                @Field(MMNewsConstants.PAGE) int page);
 }
